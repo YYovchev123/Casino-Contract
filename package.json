@@ -1,0 +1,9 @@
+{
+  "name": "hardhat-project",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0"
+  },
+  "dependencies": {
+    "@chainlink/contracts": "^0.5.1"
+  }
+}
