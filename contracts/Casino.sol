@@ -58,7 +58,6 @@ contract Casino is VRFV2WrapperConsumerBase {
     }
  
     function enterGame(uint256 prediction) external payable {  
-        // Make the required amount 0.1 ether
         require(msg.value == entryFees, "0.1 ether required");
         require(!isFull, "Lobby is full");
         require(prediction <= 100, "100 is the max guess");
@@ -197,7 +196,7 @@ contract Casino is VRFV2WrapperConsumerBase {
     function getPlayerInArr(uint256 _i) public view returns(address) {
         return currentPlayers[_i];
     }
-    // Function to check how many players are in the array
+    
     function getCurrentPlayersArrLength() public view returns(uint256) {
         return currentPlayers.length;
     }
