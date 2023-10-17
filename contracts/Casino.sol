@@ -61,6 +61,7 @@ contract Casino is VRFV2WrapperConsumerBase {
         require(msg.value == entryFees, "0.1 ether required");
         require(!isFull, "Lobby is full");
         require(prediction <= 100, "100 is the max guess");
+        // Check if anyone enters with 0
         require(playerPrediction[msg.sender] == 0, "Player has already entered");
          for(uint256 i = 0; i < predictions.length; i++) {
             if(predictions[i] == prediction) {
